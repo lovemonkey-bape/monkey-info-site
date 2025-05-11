@@ -64,3 +64,23 @@ header {
     border-radius: 16px;
     max-width: 600px;
 }
+
+/* 右上角作者信息 */
+.footer {
+    position: absolute;
+    top: 20px;  /* 离顶部的距离 */
+    right: 20px;  /* 离右侧的距离 */
+    font-size: 16px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);  /* 半透明背景 */
+    padding: 10px 20px;
+    border-radius: 10px;  /* 圆角 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  /* 轻微阴影效果 */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    font-weight: bold;
+}
