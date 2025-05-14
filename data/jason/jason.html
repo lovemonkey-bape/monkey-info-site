@@ -1,23 +1,132 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>MALEO #1</title>
-    <link rel="stylesheet" href="../../style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MALEO #1 - Jason</title>
+  <link rel="stylesheet" href="../../style.css"/>
+  <style>
+    .back-btn {
+      display: inline-block;
+      margin: 1em;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .main-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1em;
+    }
+
+    .intro-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      align-items: flex-start;
+      margin-bottom: 2em;
+    }
+
+    .intro-text {
+      flex: 1 1 300px;
+    }
+
+    .intro-image {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+
+    .intro-image img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .section {
+      margin-bottom: 2em;
+    }
+
+    .section h2 {
+      font-size: 1.5em;
+      margin-bottom: 0.5em;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.3em;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1em;
+      margin-top: 1em;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 600px) {
+      .intro-section {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <a href="index.html" class="back-btn">← 返回主页</a>
-    <div class="detail-container">
-        <img src="assets/maleo1.png" alt="MALEO #1" class="detail-img"/>
-        <div class="info">
-            <h1>MALEO #1</h1>
-            <p><strong>稀有度：</strong>💎 稀有</p>
-            <p><strong>属性：</strong>墨镜 / 紫背景 / 金链</p>
-            <p><strong>性格：</strong>冷酷机智</p>
-            <p><strong>故事简介：</strong>出生于宇宙边界的神秘猴子，操控香蕉能量，是吗喽星球的守护者之一。</p>
-        </div>
+  <a href="../../index.html" class="back-btn">← 返回主页</a>
+  <div class="main-container">
+    
+    <div class="intro-section">
+      <div class="intro-text">
+        <h1>MALEO #1 - Jason</h1>
+        <p><strong>品种：</strong>豚尾猴</p>
+        <p><strong>别称：</strong>北豚尾猴、平顶猴、猪尾猴、猪猴、平头哥</p>
+        <p><strong>年龄：</strong>4岁</p>
+        <p><strong>性别：</strong>男猴</p>
+        <p><strong>生活地区：</strong>柬埔寨</p>
+        <p><strong>特征：</strong>背红色书包转圈圈、跳来跳去（刻板行为）</p>
+        <p><strong>女友：</strong>Bela</p>
+        <p><strong>妹妹：</strong>Jessa、Hailey（未知是否有血缘关系）</p>
+        <p><strong>备注：</strong>Jason 跟 Lyly 并非情侣，仅是热门角色的配对误解。</p>
+      </div>
+      <div class="intro-image">
+        <img src="../../assets/jason.jpg" alt="Jason 正面形象图" />
+      </div>
     </div>
+
+    <div class="section">
+      <h2>简介与习性</h2>
+      <p>
+        Jason 是一种豚尾猴，头顶发型为倒三角，如不修毛则面毛呈现爱心形状。寿命可达 26 年，发情期时臀部与尾根部皮肤明显肿胀发红。主要分布于越南、老挝、柬埔寨等东南亚地区，在中国云南与西藏也有分布。
+      </p>
+      <p>
+        作为群居动物，Jason 爬树速度极快。在泰国，当地人甚至训练豚尾猴摘椰子（推荐可在 B 站搜索相关视频）。豚尾猴已列入中国《国家重点保护野生动物名录》一级保护动物。
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>冷知识</h2>
+      <p>
+        Jason 最出圈的一幕是“背红书包转圈圈”，该书包在 PDD 可购得同款。跳跃与转圈的行为虽然可爱，但也可能源于圈养环境下的刻板行为。网友曾戏称 Jason 为“娟子”，是网络梗的延伸。
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>更多图片</h2>
+      <div class="gallery-grid">
+        <img src="./jason_young.jpeg" alt="幼年 Jason 图" />
+        <img src="./bela.jpeg" alt="Jason 女友 Bela" />
+        <img src="./jason_mom.jpeg" alt="Jason 和妈妈" />
+        <img src="./jason_spin.jpeg" alt="Jason 转圈图" />
+        <img src="./jason_dump.jpeg" alt="Jason 跳跃图" />
+        <!-- 如有更多图片可继续添加 -->
+      </div>
+    </div>
+
+  </div>
 </body>
 </html>
