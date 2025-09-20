@@ -216,7 +216,6 @@ body {
   border-radius: 30px;
 }
 
-
 .card-content {
   text-align: center;
 }
@@ -426,7 +425,8 @@ body {
   padding: 40px 20px;
 }
 
-.detail-intro {
+.detail-intro,
+.intro-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
@@ -494,32 +494,71 @@ body {
 .detail-image img:hover {
   transform: scale(1.05);
 }
-
+/* 详情段落样式优化 */
 .detail-section {
+  margin: 0 auto 40px;
+  padding: 40px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-  padding: 30px;
-  margin-bottom: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+/* 标题渐变 + 下划线 */
 .detail-section h2 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  margin-bottom: 20px;
-  color: #ffffff;
+  margin-bottom: 1rem;
   background: linear-gradient(45deg, #a55eea, #4ecdc4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
+.detail-section h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin-top: 8px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #a55eea, #4ecdc4);
+}
+
+/* 段落文本 */
 .detail-section p {
-  color: #e0e0e0;
-  line-height: 1.8;
-  font-size: 1.1rem;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  color: #f0f0f0;
+  line-height: 1.9;
+  font-size: 1rem;
+  margin-bottom: 1em; /* 段落间距 */
+  text-align: justify; /* 左右对齐 */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+ 
+
+/* 段落内强调（比如日期/人物） */
+.detail-section p strong {
+  color: #4ecdc4;
+  font-weight: 600;
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+  .detail-section {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .detail-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .detail-section p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
 }
 
 .placeholder-section {
@@ -587,18 +626,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
-}
-
-.intro-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 40px;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 24px;
-  padding: 40px;
 }
 
 .intro-text h1 {
@@ -767,6 +794,10 @@ body {
     font-size: 0.9rem;
     border-radius: 10px;
     margin-bottom: 25px;
+  }
+  .back-btn:active {
+    transform: scale(0.95);
+    background: rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -1005,12 +1036,21 @@ body {
     margin: 8px auto 0;
     border-radius: 1px;
   }
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
 
-  /* 优化图片库在移动端的显示 */
   .gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  /* .gallery-grid img {
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  }
+  } */
 
   .gallery-grid img:active {
     transform: scale(0.95);
